@@ -2,39 +2,63 @@
 
 {% block content %}
 <br>
-<div class="panel panel-default">
-  <div class="panel-heading">
-  </div>
-  <div class="panel-body">
-    <div class="row">
-
-      <div class="col-xs-12 col-lg-6">
-        <h2 class="text" style="text-indent:10px">{{diet.name}}</h2>
-        <hr>
-          <p>{{diet.description}}</p>
+<div class="row">
+  <div class="col-xs-12 col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
       </div>
+      <div class="panel-body">
+        <div class="row">
 
-      <div class="col-xs-12 col-lg-6">
-        <img src="{{diet.image}}" class="img img-rounded center-block"></img>
+          <div class="col-xs-12 col-lg-6">
+            <h2 class="text" style="text-indent:10px">{{diet.name}}</h2>
+            <hr>
+              <p>{{diet.description}}</p>
+          </div>
+
+          <div class="col-xs-12 col-lg-6">
+            <img src="{{diet.image}}" class="img img-rounded center-block"></img>
+          </div>
+
+        </div>
+
       </div>
-
     </div>
-
   </div>
-</div>
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">
-      Foods
-    </h3>
-  </div>
-  <div class="panel-body">
-    <div class="dashboard__feed">
-      {% for food in diet.foods %}
-      <div class="dashboard-feed__item">
-        {{food}}
+  <div class="col-xs-12 col-lg-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          Foods
+        </h3>
       </div>
-      {% endfor %}
+      <div class="panel-body">
+        <div class="dashboard__feed">
+          {% for food in diet.foods %}
+          <div class="dashboard-feed__item">
+            {{food}}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-lg-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          Exercices
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div class="dashboard__feed">
+          {% for food in diet.foods %}
+          <div class="dashboard-feed__item">
+            {{food}}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </div>
