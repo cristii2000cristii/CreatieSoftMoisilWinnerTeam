@@ -3,59 +3,44 @@
 {% block content %}
 
   <h3 class="page-header">
-    Our Diets
+    Diets
   </h3>
 
-  <!-- Ribbon: Left -->
+  <div class="alert">
+    <strong>Choose</strong> a diet to follow and enjoy!
+  </div>
+
   <div class="row">
-    <div class="col-xs-12">
+
+    {% for diet in diets %}
+    <div class="col-xs-12 col-sm-6 col-lg-3">
 
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">
-            Choose a diet to follow
+            {{diet.name}}
           </h3>
         </div>
         <div class="panel-body">
 
-          <div class="row">
-
-            {% for diet in diets %}
-            <div class="col-xs-12 col-sm-6 col-lg-3">
-
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title">
-                    {{diet.name}}
-                  </h3>
-                </div>
-                <div class="panel-body">
-
-                  <div class="thumbnail">
-                    <img src="assets/img/general_1.jpg" alt="...">
-                    <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>
-                        {{diet.description}}
-                      </p>
-                      <p>
-                        <a ref="/diet/{{diet.id}}" class="btn btn-primary">Preview</a>
-                        <a href="#" class="btn btn-link">More info</a>
-                      </p>
-                    </div>
-                  </div>
-
-                </div>
-              </div> <!-- / .panel -->
-
+          <div class="thumbnail">
+            <img src="{{diet.image}}" alt="...">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>
+                {{diet.description}}
+              </p>
+              <p>
+                <a href="/diet/{{diet.id}}" class="btn btn-primary">More info</a>
+              </p>
             </div>
-            {% endfor %}
-
-          </div> <!-- / .row -->
+          </div>
 
         </div>
       </div> <!-- / .panel -->
 
     </div>
+    {% endfor %}
+
   </div>
 {% endblock %}
