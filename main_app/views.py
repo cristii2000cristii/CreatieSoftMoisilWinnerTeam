@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from .models import Users
+from .models import Diets
 from .forms import UsersForm
 
 # Create your views here.
@@ -15,11 +16,10 @@ def add_user(request):
                       adress = form.cleaned_data['adress'])
         users.save()
     return HttpResponseRedirect('/')
-    
+
 def index(request):
-    users = Users.objects.all()
-    form = UsersForm()
-    return render(request,"index.html",{'users':users,'form':form})
+    diets = Diets.objects.all()
+    return render(request,"index.html",{'diets':diets})
 
 def user(request,user_id):
     user = Users.objects.get(id=user_id)

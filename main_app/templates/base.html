@@ -4,11 +4,106 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
     <title>Life Helper</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" type="text/css" href="{% static 'theme.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'font-awesome.min.css' %}">
+
+    <!-- CSS Global -->
+    <!--endbuild-->
+
   </head>
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbar_main">
+
+          <!-- Navbar: Brand -->
+          <a class="navbar-brand" href="#">
+            Life Helper
+          </a>
+
+          <!-- Navbar: Toggle menu -->
+          <a href="#" class="navbar-btn navbar-left" id="sidebar__toggle">
+            <i class="fa fa-bars"></i>
+          </a>
+
+          <!-- Navbar: Search form -->
+          <form class="navbar-form navbar-left hidden-xs" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-link">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Navbar: Sign out -->
+          <a href="#" class="navbar-btn navbar-right btn btn-accent">
+            Sign Out
+          </a>
+
+          <!-- Navbar: Links -->
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="navbar-notification"></span>
+                <span class="hidden-xs">Messages</span> <i class="fa fa-envelope visible-xs-inline-block"></i>
+              </a>
+              <div class="dropdown-menu navbar-messages">
+                <a href="#" class="navbar-messages__item">
+                  <div class="navbar-messages__avatar">
+                    <img src="assets/img/user_2.jpg" alt="...">
+                  </div>
+                  <div class="navbar-messages__body">
+                    <h5 class="navbar-messages__sender">
+                      Jane Roe <small>2 hours ago</small>
+                    </h5>
+                    <p class="navbar-messages__content">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="navbar-messages__view-all">
+                  View All
+                </a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="navbar-notification hidden"></span>
+                <span class="hidden-xs">Alerts</span> <i class="fa fa-bell visible-xs-inline-block"></i>
+              </a>
+              <div class="dropdown-menu navbar-alerts">
+
+                <a href="#" class="navbar-alerts__item">
+                  <span class="label label-success">
+                    <i class="fa fa-user"></i>
+                  </span>
+                  New user registered
+                  <small>5 hours ago</small>
+                </a>
+                <a href="#" class="navbar-alerts__view-all">
+                  View All
+                </a>
+              </div>
+            </li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
     <main>
       <br><br>
       <div class="container">
