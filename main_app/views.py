@@ -24,10 +24,11 @@ def index(request):
 
 def diet(request,diet_id):
     diet = Diets.objects.get(id=diet_id)
+    diets = Diets.objects.all().values_list('id',flat=True)
     try:
        diet.foods = json.loads(diet.foods)
        diet.exercises = json.loads(diet.exercises)
     except:
        print("Error")
 
-    return render(request,"diet.html",{'diet':diet})
+    return render(request,"diet.html",{'diet':diet,'diets':diets})
