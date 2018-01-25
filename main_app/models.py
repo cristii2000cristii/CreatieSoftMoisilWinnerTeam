@@ -14,11 +14,11 @@ class Diets(models.Model):
     name = models.CharField(max_length=100)
     foods = models.CharField(max_length=100)
     exercises = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
+    description = models.CharField(max_length=600)
     image = models.CharField(default = "",max_length=100)
 
     def __str__(self):
-        return self.name + self.id
+        return self.name
 
 class Days(models.Model):
     name = models.CharField(max_length=100)
