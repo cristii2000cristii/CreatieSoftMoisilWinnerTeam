@@ -24,7 +24,10 @@ def index(request):
 
 def diet(request,diet_id):
     diet = Diets.objects.get(id=diet_id)
-    diet.foods = json.loads(diet.foods)
-    diet.exercises = json.loads(diet.exercises)
+    try:
+       diet.foods = json.loads(diet.foods)
+       diet.exercises = json.loads(diet.exercises)
+    except:
+       print("Error")
 
     return render(request,"diet.html",{'diet':diet})
