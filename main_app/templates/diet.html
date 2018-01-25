@@ -36,7 +36,8 @@
         <div class="dashboard__feed">
           {% for food in diet.foods %}
           <div class="dashboard-feed__item">
-            {{food}}
+            {{food.0}}
+            <small>{{food.1}}</small>
           </div>
           {% endfor %}
         </div>
@@ -52,9 +53,10 @@
       </div>
       <div class="panel-body">
         <div class="dashboard__feed">
-          {% for food in diet.exercices %}
+          {% for exercise in diet.exercises %}
           <div class="dashboard-feed__item">
-            {{food}}
+            {{exercise.0}}
+            <small>{{exercise.1}}</small>
           </div>
           {% endfor %}
         </div>
