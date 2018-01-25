@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from .models import Users
 from .models import Diets
+from .models import Days
 from .forms import UsersForm
 
 # Create your views here.
@@ -25,6 +26,10 @@ def index(request):
 def diet(request,diet_id):
     diet = Diets.objects.get(id=diet_id)
     diets = Diets.objects.all().values_list('id',flat=True)
+    try:
+        diet.days = Days.objects.get(diet=diet.id)
+    except:
+       print("Error")
     try:
        diet.foods = json.loads(diet.foods)
        diet.exercises = json.loads(diet.exercises)
