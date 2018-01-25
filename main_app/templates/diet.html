@@ -17,7 +17,7 @@
           </div>
 
           <div class="col-xs-12 col-lg-6">
-            <img src="{{diet.image}}" class="img img-rounded center-block"></img>
+            <img src="{{diet.image}}" style="max-width:450px" class="img img-rounded center-block"></img>
           </div>
 
         </div>
@@ -63,5 +63,53 @@
       </div>
     </div>
   </div>
+  <div class="col-xs-12 col-lg-12">
+
+    <!-- Basic table -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      <h4 class="panel-title">Days</h4>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Breakfast</th>
+              <th>Dinner</th>
+              <th>Launch</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Day 1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> <!-- / .table -->
+
+  </div>
 </div>
+
+<nav class="clearfix text-center">
+  <ul class="pagination pagination-md ">
+    <li class="disabled">
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% for dietid in diets %}
+    <li class=""><a href="/diet/{{dietid}}">{{dietid}}</a></li>
+    {% endfor %}
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 {% endblock %}
