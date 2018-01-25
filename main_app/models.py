@@ -27,6 +27,7 @@ class Days(models.Model):
     breakfast = models.CharField(max_length=100)
     lunch = models.CharField(max_length=100)
     dinner = models.CharField(max_length=100)
+    description = models.CharField(default = "",max_length=600)
 
     def __str__(self):
         return self.name
