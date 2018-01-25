@@ -105,7 +105,7 @@
       </a>
     </li>
     {% for dietid in diets %}
-    <li class=""><a href="/diet/{{dietid}}">{{dietid}}</a></li>
+    <li class="{% if dietid == diet.id %} active {% endif %}"><a href="/diet/{{dietid}}">{{dietid}}</a></li>
     {% endfor %}
     <li>
       <a href="#" aria-label="Next">

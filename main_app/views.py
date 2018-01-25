@@ -8,7 +8,7 @@ from .models import Days
 from .forms import UsersForm
 
 # Create your views here.
-
+        
 def add_user(request):
     form = UsersForm(request.POST)
     if form.is_valid():
