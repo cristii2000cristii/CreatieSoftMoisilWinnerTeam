@@ -7,16 +7,37 @@
   </div>
   <div class="panel-body">
     <div class="row">
+
       <div class="col-xs-12 col-lg-6">
         <h2 class="text" style="text-indent:10px">{{diet.name}}</h2>
         <hr>
           <p>{{diet.description}}</p>
       </div>
+
       <div class="col-xs-12 col-lg-6">
         <img src="{{diet.image}}" class="img img-rounded center-block"></img>
       </div>
+
     </div>
 
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      Foods
+    </h3>
+  </div>
+  <div class="panel-body">
+    <div class="dashboard__feed">
+      <div class="dashboard-feed__item">
+        <span class="label label-success">
+          <i class="fa fa-user"></i>
+        </span>
+        New user registered
+        <small>3 mins ago</small>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}
