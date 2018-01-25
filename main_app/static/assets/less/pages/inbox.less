@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Inbox
  */
@@ -52,4 +53,60 @@
 .inbox-message__answer {
 	padding-top: 15px;
 	padding-left: 55px;
+=======
+/**
+ * Inbox
+ */
+
+.inbox__table {
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+
+	tbody {
+
+		tr {
+			
+			&:hover {
+				cursor: pointer;
+				background-color: #f9f9f9;
+			}
+			&:last-child {
+				border-bottom: 1px solid @gray-lighter;
+			}
+		}
+	}
+}
+
+
+/**
+ * Inbox: Message (modal)
+ */
+
+.inbox-message__header {
+	padding-bottom: 5px;
+}
+.inbox-message__avatar {
+	vertical-align: middle;
+	display: inline-block;
+	width: 40px; height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 15px;
+
+	> img {
+		width: 100%; height: auto;
+	}
+}
+.inbox-message__sender {
+	display: inline-block;
+	font-size: @font-size-base;
+	font-weight: 600;
+}
+.inbox-message__body {
+	padding-left: 55px;
+}
+.inbox-message__answer {
+	padding-top: 15px;
+	padding-left: 55px;
+>>>>>>> 4e13a94adad84840318116a68a20e256bca0f1de
 }
