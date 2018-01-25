@@ -15,6 +15,7 @@ class Diets(models.Model):
     foods = models.CharField(max_length=100)
     exercises = models.CharField(max_length=100)
     description = models.CharField(max_length=100)
+    image = models.CharField(default = "",max_length=100)
 
     def __str__(self):
         return self.name

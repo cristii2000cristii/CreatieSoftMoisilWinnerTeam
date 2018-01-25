@@ -22,5 +22,5 @@ def index(request):
     return render(request,"index.html",{'diets':diets})
 
 def diet(request,diet_id):
-    diet = Diet.objects.get(id=diet_id)
+    diet = Diets.objects.get(id=diet_id)
     return render(request,"diet.html",{'diet':diet})
