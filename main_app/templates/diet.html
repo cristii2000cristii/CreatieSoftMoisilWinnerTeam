@@ -99,19 +99,9 @@
 
 <nav class="clearfix text-center">
   <ul class="pagination pagination-md ">
-    <li class="disabled">
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    {% for dietid in diets %}
-    <li class="{% if dietid == diet.id %} active {% endif %}"><a href="/diet/{{dietid}}">{{dietid}}</a></li>
+    {% for dietid in dietsid %}
+    <li class="{% if dietid == diet.id %} active {% endif %}"><a href="/diet/{{dietid}}">{{ forloop.counter }}</a></li>
     {% endfor %}
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
   </ul>
 </nav>
 {% endblock %}

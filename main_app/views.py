@@ -8,7 +8,7 @@ from .models import Days
 from .forms import UsersForm
 
 # Create your views here.
-        
+
 def add_user(request):
     form = UsersForm(request.POST)
     if form.is_valid():
@@ -25,9 +25,9 @@ def index(request):
 
 def diet(request,diet_id):
     diet = Diets.objects.get(id=diet_id)
-    diets = Diets.objects.all().values_list('id',flat=True)
+    dietsid = Diets.objects.all().values_list('id',flat=True)
     try:
-        diet.days = Days.objects.get(diet=diet.id)
+        diet.days = Days.objects.filter(diet=int(diet_id))
     except:
        print("Error")
     try:
@@ -36,4 +36,4 @@ def diet(request,diet_id):
     except:
        print("Error")
 
-    return render(request,"diet.html",{'diet':diet,'diets':diets})
+    return render(request,"diet.html",{'diet':diet,'dietsid':dietsid})
