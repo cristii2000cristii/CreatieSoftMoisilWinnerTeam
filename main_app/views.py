@@ -21,6 +21,6 @@ def index(request):
     diets = Diets.objects.all()
     return render(request,"index.html",{'diets':diets})
 
-def user(request,user_id):
-    user = Users.objects.get(id=user_id)
-    return render(request,"user.html",{'user':user})
+def diet(request,diet_id):
+    diet = Diet.objects.get(id=diet_id)
+    return render(request,"diet.html",{'diet':diet})
