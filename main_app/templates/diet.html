@@ -30,13 +30,11 @@
   </div>
   <div class="panel-body">
     <div class="dashboard__feed">
+      {% for food in diet.foods %}
       <div class="dashboard-feed__item">
-        <span class="label label-success">
-          <i class="fa fa-user"></i>
-        </span>
-        New user registered
-        <small>3 mins ago</small>
+        {{food}}
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>

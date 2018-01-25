@@ -1,4 +1,4 @@
-import json
+import string
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
@@ -24,5 +24,5 @@ def index(request):
 
 def diet(request,diet_id):
     diet = Diets.objects.get(id=diet_id)
-    diet.foods = json.dumps(diet.foods)
+    diet.foods = diet.foods.split('~')
     return render(request,"diet.html",{'diet':diet})
