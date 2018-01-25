@@ -65,6 +65,30 @@
   </div>
   <div class="col-xs-12 col-lg-12">
 
+    <!-- Modals -->
+    <div class="modal fade" id="modal_basic" tabindex="-1" role="dialog" aria-labelledby="modal_basic__heading">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="modal_basic__heading">Basic modal</h4>
+          </div>
+          <div class="modal-body">
+            <p>
+              <img src="assets/img/general_1.jpg" class="img-responsive" alt="...">
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate accusamus ea totam suscipit corporis fugiat, saepe quibusdam numquam odio explicabo facilis ullam iusto unde nulla sequi aut, laboriosam, dicta eos.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <a role="button" href="#modal_basic" data-toggle="modal" class="btn btn-primary">Open basic modal</a>  -->
     <!-- Basic table -->
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -78,6 +102,7 @@
               <th>Breakfast</th>
               <th>Lunch</th>
               <th>Dinner</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -87,6 +112,7 @@
               <td>{{day.breakfast}}</td>
               <td>{{day.lunch}}</td>
               <td>{{day.dinner}}</td>
+              <td><a href="{{day.description}}">Finished</a></td>
             </tr>
             {% endfor %}
           </tbody>
